@@ -35,7 +35,7 @@
 |lstm|테스트2|테스트3|테스트3|테스트3|테스트3|
 |cnn|테스트2|테스트3|테스트3|테스트3|테스트3|
   
-## Conclusion & Discussion
+## Applications
 
 
 
