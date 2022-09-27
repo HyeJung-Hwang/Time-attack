@@ -20,7 +20,7 @@
 설명
 
 
-## Models and Learning Parameter Setting
+## Models and training details
 
 - MLP
 - LSTM
@@ -28,9 +28,11 @@
 
 ## Results
 
-  | Original | auroc    | aurpc | recall | precision |
-  |  mlp     | :------: | :---- | :----- | :-------- |
-  | lstm     | :------: | :---- | :----- | :-------- |
+|제목|auroc|auprc|recall|precision|f1-score|
+|------|---|---|---|---|---|
+|mlp|테스트2|테스트3|테스트3|테스트3|테스트3|
+|lstm|테스트2|테스트3|테스트3|테스트3|테스트3|
+|cnn|테스트2|테스트3|테스트3|테스트3|테스트3|
   
 ## Conclusion & Discussion
 
