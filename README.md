@@ -13,6 +13,7 @@
 
 ## Raw Data
 1️⃣ vital db 어쩌구저쩌구
+
 2️⃣ 데이터셋 붉균형이 심하다
 
 ## making sequence data
