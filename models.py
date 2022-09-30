@@ -1,6 +1,54 @@
 import torch.nn as nn
 import torch.nn.functional as F
+class GlobalMaxPooling(nn.Module):
+    def forward(self, x):
+        kernel_size = x.size()[2:]
+        return F.max_pool1d(x, kernel_size )
+    
+class Flatten(nn.Module):
+    def forward(self, x):
+        batch_size = x.shape[0]
+        return x.contiguous().view(batch_size, -1)    
+    
+class CNN(nn.Module): 
+    def __init__(self, n_classes = 2):   
+        super(CNN, self).__init__()
+        self.conv_1 = nn.Sequential(
+            nn.Conv1d( in_channels = 1, out_channels= 64, kernel_size= 2, stride= 1),
+            nn.BatchNorm1d(num_features = 64 ),
+            nn.ReLU(),
+            nn.MaxPool1d(kernel_size= 2, stride= 1),
+        )
+        self.conv_2 = nn.Sequential(
+            nn.Conv1d( in_channels = 64, out_channels= 64, kernel_size= 2, stride= 1),
+            nn.BatchNorm1d(num_features = 64 ),
+            nn.ReLU(),
+            nn.MaxPool1d(kernel_size= 2, stride= 1),
+        )
+        self.conv_3 = nn.Sequential(
+            nn.Conv1d( in_channels = 64, out_channels=16, kernel_size= 2, stride= 1),
+            nn.BatchNorm1d(num_features = 16 ),
+            nn.ReLU(),
+            nn.MaxPool1d(kernel_size= 2, stride= 1),
+        )
+        self.gmp_flatten = nn.Sequential(
+            GlobalMaxPooling(),
+            Flatten(),
+        )
+        self.FC = nn.Linear(16, 1)
+        self.BN = nn.BatchNorm1d(16)
 
+    def forward(self, x):
+        x = x.view(-1,1,1*10)
+        x = self.conv_1(x)
+        x = self.conv_2(x)
+        x = self.conv_3(x)
+        x = self.gmp_flatten(x)
+        x = self.BN(x)
+        x = self.FC(x)
+        out = F.sigmoid(x)
+        
+        return out
 class LSTM_FC(nn.Module):
     def __init__(self, n_classes = 2):   
         super(LSTM_FC, self).__init__()
