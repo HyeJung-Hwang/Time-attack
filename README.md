@@ -37,7 +37,8 @@
   
 ## Applications
 
-
+Streamlit 라이브러리를 통해 환자의 수술 중 혈압 데이터와 모델 예측 결과를 보여주는 시각화 프로토타입을 제작하였습니다. <br>
+<img width="600" alt="demo-streamlit" src="https://user-images.githubusercontent.com/79091824/193453626-f0949fe0-faae-4329-b975-7284336d9126.gif">
 
 ## Reference 
 
