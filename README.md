@@ -3,8 +3,10 @@
 ## Overview
 설명
 
+
 ## Our Goal
 설명
+
 
 ## Deep Learning-based  Hypotension prediction
 설명
@@ -28,6 +30,7 @@
 - LSTM
 - CNN
 
+
 ## Results
 
 |제목|auroc|auprc|recall|precision|f1-score|
@@ -38,6 +41,7 @@
 
 실제로 양성일 환자를 양성으로 모델이 예측한 확률을 나타내는 recall 지표와 precision과 recall을 모두 보는 지표인 auprc 2가지로 모델의 성능을 비교해보았을 때,
 lstm 모델의 성능이 가장 좋은 것으로 간주하였다.
+
 
 ## Applications
 
