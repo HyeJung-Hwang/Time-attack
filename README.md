@@ -1,4 +1,4 @@
-# 🩸 Hypotension Prediction using Mean Blood Pressure Values by Deep Learning
+# 🩸 Hypotension Prediction using Mean Blood Pressure Values
 
 ## Overview
 본 웹사이트는 수술 중 저혈압 예측 모델을 활용하여, 특정 환자의 수술 중 저혈압 지표를 시각화 한 웹사이트이다. 특정 환자의 case_id를 선택하면, 해당 환자의 시간에 따른 수술 중 Mean Blood Pressure 수치와 LSTM 모델로 예측한 수술 중 저혈압 발생 구간을 확인 할 수 있다.  
