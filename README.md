@@ -12,7 +12,7 @@
 
 
 ## Raw Data
-[vital db](https://vitaldb.net/)에서 제공하는 환자 데이터셋을 사용했다.
+[vital db](https://vitaldb.net/) 에서 제공하는 환자 데이터셋을 사용했다.
 
 
 ## making sequence data
