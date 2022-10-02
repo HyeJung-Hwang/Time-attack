@@ -1,4 +1,4 @@
-# Hypotension prediction using mean blood pressure values using Deep Learning
+# Hypotension Prediction using Mean Blood Pressure Values using Deep Learning
 
 ## Overview
 설명
