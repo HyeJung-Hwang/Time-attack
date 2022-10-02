@@ -12,13 +12,12 @@
 
 
 ## Raw Data
-1️⃣ vital db 어쩌구저쩌구
+[vital db](https://vitaldb.net/)에서 제공하는 환자 데이터셋을 사용했다.
 
-2️⃣ 데이터셋 붉균형이 심하다
 
 ## making sequence data
-
-설명
+평균 혈압데이터가 65 mmHg 아래인 상태를 hypotension 으로 간주하였고 , 
+20 sec 간의 평균 혈압데이터를 input data , 1분 뒤의 평균 혈압데이터가 65 mmHg인지 유무를 라벨데이터로 데이터셋을 구축하였다.
 
 
 ## Models and training details
@@ -38,8 +37,9 @@
 ## Applications
 
 Streamlit 라이브러리를 통해 환자의 수술 중 혈압 데이터와 모델 예측 결과를 보여주는 시각화 프로토타입을 제작하였습니다. <br>
+
 <img width="600" alt="demo-streamlit" src="https://user-images.githubusercontent.com/79091824/193453626-f0949fe0-faae-4329-b975-7284336d9126.gif">
 
 ## Reference 
-
+* [vital db examples](https://github.com/vitaldb/examples/blob/master/hypotension_mbp.ipynb)
 
