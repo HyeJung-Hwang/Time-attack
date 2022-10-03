@@ -42,7 +42,7 @@
 |cnn|0.87|0.63|0.94|0.57|
 
 - 모델이 저혈압 발생(positive) 예측을 정확하게 하는 지 평가하는데 효과적인 metric인 auprc score를 주요 성능 비교 지표로 정하였습니다. 
-- lstm 모델(tensorflow)의 auprc score가 0.77로 다른 모델들보다 높아, 저혈압 발생 예측을 가장 정확하게 하였다고 
+- lstm 모델(tensorflow)의 auprc score가 0.77로 다른 모델들보다 높아, 저혈압 발생 예측을 가장 정확하게 하였다고 판단했습니다.
 
 
 ## Applications
