@@ -1,5 +1,21 @@
 import torch.nn as nn
 import torch.nn.functional as F
+from keras.models import Sequential
+from keras.models import Model, load_model
+from keras.layers import Dense, LSTM, Input, BatchNormalization
+from keras.callbacks import ModelCheckpoint, EarlyStopping
+import tensorflow as tf
+
+# LSTM (tensorflow model)
+model = Sequential()
+model.add(LSTM(LSTM_NODES, input_shape=x.shape[1:]))
+model.add(BatchNormalization())
+model.add(Dense(1, activation='sigmoid'))
+model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy', tf.keras.metrics.AUC()])
+hist = model.fit(train_x_valid, train_y_valid, validation_split=0.1, epochs=100, batch_size=BATCH_SIZE, class_weight={0:1, 1:5},
+                 callbacks=[ModelCheckpoint(monitor='val_loss', filepath=weight_path, verbose=1, save_best_only=True),
+                            EarlyStopping(monitor='val_loss', patience=2, verbose=0, mode='auto')])
+
 class GlobalMaxPooling(nn.Module):
     def forward(self, x):
         kernel_size = x.size()[2:]
@@ -49,6 +65,8 @@ class CNN(nn.Module):
         out = F.sigmoid(x)
         
         return out
+    
+# LSTM (pytorch model)
 class LSTM_FC(nn.Module):
     def __init__(self, n_classes = 2):   
         super(LSTM_FC, self).__init__()
