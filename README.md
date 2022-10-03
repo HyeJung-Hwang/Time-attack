@@ -23,7 +23,7 @@
 20 sec 간의 평균 혈압데이터를 input data , 1분 뒤의 평균 혈압데이터가 65 mmHg인지 유무를 라벨데이터로 데이터셋을 구축하였습니다.
 
 ![image](https://user-images.githubusercontent.com/79091824/193498449-f12b8e5e-471e-48dc-b511-45b557e13e68.png)
-(사진 출처 :[vital db examples](https://github.com/vitaldb/examples/blob/master/hypotension_mbp.ipynb))
+(사진 출처 : [vital db examples](https://github.com/vitaldb/examples/blob/master/hypotension_mbp.ipynb))
 
 ## Models and Training Details
 
