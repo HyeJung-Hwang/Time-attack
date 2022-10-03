@@ -24,7 +24,7 @@
 ## Models and Training Details
 
 - MLP
-- LSTM
+- LSTM 
 - CNN
 - 3 가지 모델 모두 데이터셋 불균형(hypotension : non hypotension =  1 : 20) 을 해결하기 위해, 1:20으로 training ratio 를 설정하였다.
 
@@ -43,7 +43,7 @@ lstm 모델의 성능이 가장 좋은 것으로 간주하였다.
 
 ## Applications
 
-Streamlit 라이브러리를 통해 환자의 수술 중 혈압 데이터와 모델 예측 결과를 보여주는 시각화 프로토타입을 제작했다. <br>
+Streamlit 라이브러리와 Tensorflow 라이브러리를 이용해 환자의 수술 중 혈압 데이터와 모델 예측 결과를 보여주는 시각화 프로토타입을 제작했다. <br>
 
 <img width="600" alt="demo-streamlit" src="https://user-images.githubusercontent.com/79091824/193453626-f0949fe0-faae-4329-b975-7284336d9126.gif">
 
